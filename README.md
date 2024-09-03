@@ -6,7 +6,7 @@ A 3d game starter based on Vite
 - Clone the repository
 
 ```bash
-npx degit fibbojs/starter-3d starter-3d
+npx tiged fibbojs/starter-3d starter-3d
 ```
 
 - Install the dependencies
