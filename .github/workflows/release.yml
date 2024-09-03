@@ -48,7 +48,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       # Build game
-      - name: Build 2D playground
+      - name: Build game
         run: npm run build
       # Upload artifacts
       - name: Upload artifact
