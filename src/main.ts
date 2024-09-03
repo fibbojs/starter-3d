@@ -2,7 +2,7 @@ import * as THREE from 'three'
 import RAPIER from '@dimforge/rapier3d'
 import { FComponentEmpty, FCuboid, FGameCamera, FScene } from '@fibbojs/3d'
 import { FKeyboard } from '@fibbojs/event'
-// import { fDebug } from '@fibbojs/devtools'
+import { fDebug } from '@fibbojs/devtools'
 import './style.css'
 import Character from './classes/Character'
 
@@ -12,10 +12,8 @@ import Character from './classes/Character'
   scene.init()
   await scene.initPhysics()
   // Debug the scene
-  /*
   if (import.meta.env.DEV)
     fDebug(scene)
-  */
 
   // Add ambient light
   const light = new THREE.AmbientLight(0xFFFFFF)
