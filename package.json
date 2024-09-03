@@ -1,15 +1,15 @@
 {
-  "name": "my-fibbo-game",
+  "name": "starter-3d",
   "type": "module",
   "version": "0.0.1",
   "private": true,
   "author": "John Doe <john.doe@fibbo.js>",
-  "homepage": "https://johndoe.github.io/my-fibbo-game",
+  "homepage": "https://johndoe.github.io/starter-3d",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/johndoe/my-fibbo-game.git"
+    "url": "git+https://github.com/johndoe/starter-3d.git"
   },
-  "bugs": "https://github.com/johndoe/my-fibbo-game/issues",
+  "bugs": "https://github.com/johndoe/starter-3d/issues",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",

@@ -6,13 +6,13 @@ A 3d game starter based on Vite
 - Clone the repository
 
 ```bash
-npx degit fibbojs/starter-3d my-fibbo-game
+npx degit fibbojs/starter-3d starter-3d
 ```
 
 - Install the dependencies
 
 ```bash
-cd my-fibbo-game
+cd starter-3d
 npm install
 ```
 
