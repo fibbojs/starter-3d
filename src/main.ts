@@ -1,6 +1,5 @@
-import * as THREE from 'three'
 import RAPIER from '@dimforge/rapier3d'
-import { FComponentEmpty, FCuboid, FGameCamera, FScene } from '@fibbojs/3d'
+import { FAmbientLight, FComponentEmpty, FCuboid, FDirectionalLight, FGameCamera, FScene } from '@fibbojs/3d'
 import { FKeyboard } from '@fibbojs/event'
 import { fDebug } from '@fibbojs/devtools'
 import './style.css'
@@ -8,16 +7,26 @@ import Character from './classes/Character'
 
 (async () => {
   // Initialize the scene
-  const scene = new FScene()
+  const scene = new FScene({
+    shadows: true,
+  })
   scene.init()
   await scene.initPhysics()
   // Debug the scene
   if (import.meta.env.DEV)
     fDebug(scene)
 
+  // Add directional light to represent the sun
+  scene.addLight(new FDirectionalLight(scene, {
+    position: { x: 20, y: 20, z: 0 },
+    color: 0xFFFFFF,
+    intensity: 2,
+  }))
   // Add ambient light
-  const light = new THREE.AmbientLight(0xFFFFFF)
-  scene.scene.add(light)
+  scene.addLight(new FAmbientLight(scene, {
+    color: 0x404040,
+    intensity: 20,
+  }))
 
   // Create a death zone
   const deathZone = new FComponentEmpty(scene, {
