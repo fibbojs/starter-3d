@@ -19,7 +19,8 @@ import Character from './classes/Character'
   new FDirectionalLight(scene, {
     position: { x: 20, y: 20, z: 0 },
     color: 0xFFFFFF,
-    intensity: 2,
+    intensity: 3,
+    shadowQuality: 12,
   })
   // Add ambient light
   new FAmbientLight(scene, {
