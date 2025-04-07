@@ -39,11 +39,11 @@ import Character from './classes/Character'
   const ground = new FCuboid({
     position: { x: 0, y: -0.1, z: 0 },
     scale: { x: 15, y: 0.1, z: 15 },
+    color: 0x348C31,
   })
   ground.initRigidBody({
     rigidBodyType: FRigidBodyType.FIXED,
   })
-  ground.setColor(0x348C31)
 
   // Create a character
   const character = new Character()
